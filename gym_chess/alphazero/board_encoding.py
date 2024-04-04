@@ -56,9 +56,9 @@ class BoardEncoding(gym.ObservationWrapper):
         
         self.observation_space = spaces.Box(
             low=0,
-            high=np.iinfo(np.int).max,
+            high=np.iinfo(int).max,
             shape=(8, 8, history_length * 14 + 7),
-            dtype=np.int
+            dtype=int
         )
 
 
@@ -86,7 +86,7 @@ class BoardEncoding(gym.ObservationWrapper):
         
         meta = np.zeros(
             shape=(8 ,8, 7),
-            dtype=np.int
+            dtype=int
         )
     
         # Active player color
