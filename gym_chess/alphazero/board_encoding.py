@@ -128,7 +128,7 @@ class BoardHistory:
 
         #: Ring buffer of recent board encodings; stored boards are always
         #: oriented towards the White player. 
-        self._buffer = np.zeros((length, 8, 8, 14), dtype=np.int)
+        self._buffer = np.zeros((length, 8, 8, 14), dtype=int)
 
 
     def push(self, board: chess.Board) -> None:
