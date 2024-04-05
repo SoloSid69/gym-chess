@@ -147,7 +147,7 @@ class BoardHistory:
     def encode(self, board: chess.Board) -> np.array:
         """Converts a board to numpy array representation."""
 
-        array = np.zeros((8, 8, 14), dtype=np.int)
+        array = np.zeros((8, 8, 14), dtype=int)
 
         for square, piece in board.piece_map().items():
             rank, file = chess.square_rank(square), chess.square_file(square)
